@@ -187,7 +187,7 @@ export function About() {
               {CATEGORIES.map(category => (
                 <button className="about-category-card" key={category.id} onClick={() => nav('/services/' + category.id)} aria-label={`Explore ${category.name}`}>
                   <img src={category.image} alt="" loading="lazy" />
-                  <span className="about-category-icon"><span className="cat-glyph">{category.icon.replaceAll('-', ' ')}</span></span>
+                  <span className="about-category-icon"><span className="cat-glyph">{category.icon.replace(/-/g, ' ')}</span></span>
                   <span className="about-category-copy"><b>{category.name}</b><small>{category.blurb}</small><span className="about-explore">Explore <ArrowRight size={14} /></span></span>
                 </button>
               ))}
